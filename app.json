@@ -1,0 +1,13 @@
+{
+  "name": "ProtoBlocks",
+  "description": "Prototipos modulares, con el sistema de los módulos ProtoBlocks ahora podes tener tus prototipos ordenados.",
+  "logo": "http://protoblocks.com.ar/logo.jpg",
+  "keywords": [
+    "ProtoBlocks",
+    "Proto Blocks",
+    "proto-blocks",
+    "protoboard",
+    "arduino",
+    "raspberry pi"
+  ]
+}

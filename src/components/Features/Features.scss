@@ -1,0 +1,59 @@
+@import "../../theme/susy.scss";
+@import "../../theme/variables.scss";
+
+.features {
+  @include span(12);
+  float: none;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  background-color: darken($color-back-action, 10%);
+
+  .wrap {
+    @include container($max-container);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 2em;
+    margin-bottom: 20px;
+
+    @include susy-media(0 $bp-small-3) {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  .items {
+    @include span(12);
+
+    .item {
+      @include span(4);
+
+      @include susy-media(0 $bp-small-3) {
+        @include span(12);
+      }
+
+      h4 {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0;
+      }
+
+      .iconHolder {
+        font-size: 7em;
+        text-align: center;
+
+        @include susy-media(0 $bp-small-3) {
+          font-size: 6em;
+        }
+      }
+
+      .body {
+        text-align: center;
+        font-size: 1.2em;
+      }
+    }
+  }
+}

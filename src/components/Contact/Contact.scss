@@ -1,0 +1,163 @@
+@import "../../theme/susy.scss";
+@import "../../theme/variables.scss";
+
+.contact {
+  @include span(12);
+  float: none;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  min-height: 200px;
+
+  background-color: darken($color-light, 10%);
+  color: $color-font-dark;
+
+  @include susy-media(0 $bp-small-3) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .wrap {
+    @include container($max-container);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 2em;
+    margin-bottom: 20px;
+
+    @include susy-media(0 $bp-small-3) {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      text-align: center;
+    }
+  }
+
+  .side {
+    @include span(6);
+  }
+
+  .info {
+    margin-top: 20px;
+  }
+
+  .iconHolder {
+    @include span(4);
+    font-size: 10em;
+    padding-top: 10px;
+    text-indent: -5%;
+
+    @include susy-media(0 $bp-small-3) {
+      display: none;
+    }
+  }
+
+  p {
+    @include span(8);
+    font-size: 1.5em;
+
+    @include susy-media(0 $bp-small-3) {
+      @include span(12);
+      margin: 5px;
+      font-size: 1.2em;
+    }
+  }
+
+  @include susy-media(0 $bp-xl) {
+    .side {
+      @include span(12);
+    }
+
+    .info {
+      margin-top: 0;
+    }
+
+    .iconHolder {
+      text-align: center;
+    }
+  }
+
+}
+
+.contactForm {
+  @include span(12);
+
+  .formBody {
+    @include span(12);
+  }
+
+  .control {
+    @include span(12);
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .fieldError {
+    font-size: 1em;
+    color: $color-font-error;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+
+    &.underlined {
+      top: initial;
+      right: initial;
+      bottom: -20px;
+      left: 10px;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 1.2em;
+    background-color: $color-back-input;
+    color: $color-font-light;
+    border: none;
+  }
+
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .buttons {
+    @include span(12);
+
+    a {
+      @include span(3 last);
+
+      background-color: $color-back-action;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      color: $color-font-light;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.thanks, .sendError {
+  @include span(12);
+  background-color: lighten($color-secondary, 30%);
+  border-radius: 6px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  p {
+    @include span(12);
+    margin: 8px;
+  }
+}
+
+.sendError {
+  @include span(12);
+  background-color: lighten($color-danger, 23%);
+
+  p {
+    font-size: 1.4em;
+  }
+}

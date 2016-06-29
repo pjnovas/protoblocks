@@ -1,0 +1,169 @@
+@import "../../theme/susy.scss";
+@import "../../theme/variables.scss";
+
+@import "./ImageGallery.scss";
+
+body {
+  background-color: #E8E8E8;
+}
+
+.container {
+  @include container($product-container);
+}
+
+.content {
+  @include span(12);
+
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  .header {
+    margin: 5px 10px;
+    position: relative;
+
+    h3 {
+      color: $color-font-dark;
+      margin: 0;
+      font-size: 2em;
+
+      text-transform: uppercase;
+      font-weight: 100;
+
+      border-bottom: 2px solid $color-separator;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      @include susy-media(0 $bp-small-2) {
+        padding-top: 5px;
+        font-size: 1.5em;
+      }
+    }
+
+    .buy {
+      position: absolute;
+      right: 10px;
+      top: 0px;
+      margin-right: 0;
+      padding: 7px 17px;
+      background-color: $color-secondary;
+
+      a {
+        font-size: 1.2em;
+        text-decoration: none;
+        color: $color-font-light;
+      }
+    }
+
+    .description {
+      color: $color-font-dark;
+      width: 100%;
+      margin-bottom: 10px;
+
+      p {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 3px;
+
+        word-break: break-word;
+        word-wrap: break-word;
+        white-space: pre-line;
+      }
+
+      h4 {
+        margin: 0;
+        margin-top: 3px;
+        display: inline-block;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: inline-block;
+
+        li {
+          display: inline-block;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .slider {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+}
+
+/*
+.description {
+  @include span(12);
+  color: $color-font-dark;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      max-width: 100px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      a {
+        padding: 7px 17px;
+        background-color: $color-font-light;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: $color-font-dark;
+      }
+
+      &.selected {
+        a {
+          border-bottom: 5px solid #337AB7;
+        }
+      }
+
+      &.buy {
+        float: right;
+        margin-right: 0;
+
+        a {
+          background-color: $color-secondary;
+          color: $color-font-light;
+        }
+      }
+    }
+  }
+
+  .tabs {
+    @include span(12);
+    background-color: $color-back-light;
+  }
+
+  .tab {
+    @include span(12);
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    word-break: break-word;
+    word-wrap: break-word;
+    white-space: pre-line;
+
+    &.details {
+
+    }
+
+    &.info {
+
+    }
+
+    &.contact {
+
+    }
+  }
+}
+*/

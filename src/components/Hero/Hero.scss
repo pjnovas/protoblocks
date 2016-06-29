@@ -1,0 +1,112 @@
+@import "../../theme/susy.scss";
+@import "../../theme/parallax.scss";
+@import "../../theme/variables.scss";
+
+.hero {
+  @include container;
+  @extend .parallax;
+
+  height: 100vh;
+  background-image: url('./top.jpg');
+
+  @include susy-media(0 $bp-med-2) {
+    background-attachment: initial;
+    background-image: initial;
+
+    &:before {
+      background-image: url('./top.jpg');
+    }
+  }
+
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    background:url($overlay) repeat;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+
+    .logo {
+      width: 510px;
+      height: 155px;
+      display: block;
+      margin: 40px auto;
+
+      @include susy-media(0 $bp-med-2) {
+        width: 400px;
+        height: 115px;
+        margin: 5% auto;
+      }
+
+      @include susy-media(0 $bp-small-2) {
+        width: 200px;
+        height: 70px;
+        margin: 2% auto;
+      }
+    }
+
+    p {
+      font-size: 4em;
+      text-align: center;
+      font-weight: 400;
+
+      @include susy-media(0 $bp-med-2) {
+        font-size: 3em;
+        margin: 5% 0;
+      }
+
+      @include susy-media(0 $bp-small-2) {
+        font-size: 2em;
+        margin: 2% 0;
+      }
+    }
+  }
+
+  .continue {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+
+    a {
+      width: 60px;
+      background: $color-back-light;
+      color: $color-action;
+      padding: 15px 13px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 2.5em;
+
+      @include susy-media(0 $bp-med-2) {
+        padding: 9px 8px;
+        font-size: 2em;
+      }
+
+      &:hover {
+        background: $color-back-action;
+        color: $color-font-light;
+      }
+    }
+  }
+
+}

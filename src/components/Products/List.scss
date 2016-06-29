@@ -1,0 +1,32 @@
+@import "../../theme/susy.scss";
+@import "../../theme/variables.scss";
+
+.products {
+  @include span(12);
+  float: none;
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  background-color: $color-light;
+  color: $color-font-dark;
+
+  .productsIntro {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  @include susy-media(0 $bp-med) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    .productsIntro {
+      text-align: center;
+      font-size: 1.2em;
+    }
+  }
+
+  .wrap {
+    @include container($max-container);
+  }
+
+}

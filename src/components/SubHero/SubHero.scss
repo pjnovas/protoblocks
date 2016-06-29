@@ -1,0 +1,53 @@
+@import "../../theme/susy.scss";
+@import "../../theme/parallax.scss";
+@import "../../theme/variables.scss";
+
+.subhero {
+  @extend .parallax;
+
+  height: 300px;
+  min-height: 300px;
+
+  background-image: url('./bot.jpg');
+
+  @include susy-media(0 $bp-med-2) {
+    background-attachment: initial;
+  }
+
+  position: relative;
+
+  @include susy-media(0 $bp-med-2) {
+    height: 150px;
+    min-height: 150px;
+  }
+
+  .overlay {
+    position: absolute;
+    background:url($overlay) repeat;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    text-align: center;
+    color: #000;
+    z-index: 2;
+
+    h2 {
+      font-size: 3em;
+      margin: 5px;
+      color: $color-font-light;
+
+      @include susy-media(0 $bp-small-3) {
+        font-size: 2em;
+      }
+    }
+  }
+}
